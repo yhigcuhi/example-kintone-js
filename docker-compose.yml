@@ -1,0 +1,21 @@
+# docker compose yml としての書き方の バージョン
+version: '3.9'
+
+# 立てるコンテナ一覧
+services:
+  # for nodejs
+  vite:
+    # 管理コンテナ名
+    container_name: ${APP_NAME}-vite
+    # Dockerファイルにて定義
+    build: 
+        context: .
+        dockerfile: ./docker/vite/Dockerfile
+    # 場所
+    volumes:
+      - ./vite-src/:/var/www/html
+    # PORT = for watch
+    ports: 
+      - ${VITE_DEV:-3000}:5173
+    # コンテナを正常終了するのを防ぐ
+    tty: true

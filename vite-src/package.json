@@ -1,0 +1,15 @@
+{
+  "name": "html",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@shin-chan/kypes": "^0.0.7",
+    "vite": "^5.0.8"
+  }
+}
