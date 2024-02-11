@@ -18,4 +18,8 @@ kintone JSカスタマイズ
 - JS アップロード後保存してアプリ更新しないと反映されない
 - 画面上から登録したフォームそれぞれに フィールドコードというid的なのがつく
 - kintone.app.record.setFieldShown(フィールドコード, true or false)で表示非表示 変えれる
+- 'mobile.app.record.create.show', 'app.record.create.show' のように 二つ 購読必要 うざい → レコード参照とかもか？今後
+- Object.fromEntries 最強
+- cybozu.data.page.FORM_DATA.schema.table.fieldList にアクセスすれば フィールドコードの↓のidがわかる
+- document.getElementsByClassName(`value-フィールドコードのid) で Wrapper部分のHTML要素に触れる（追加・編集フォームでなら）（詳細とかは kintone.app.record.getFieldElements()でいけそうs）
 - 
